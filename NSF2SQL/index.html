@@ -4,9 +4,8 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
-    <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/pygment_trac.css" media="screen">
 
     <title>NSF2SQL by UziTech</title>
   </head>
@@ -28,38 +27,31 @@
 
     <div class="container">
       <section id="main_content">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+			<h3>Introduction</h3>
+			<p>
+				This application parses documents from a Lotus Notes application and transfer them to an SQL database.
+				It allows you to pick the application from a Domino server or on your local computer.
+				It then parses the documents automatically to find out the type of information in each field at about 20,000 documents per minute.
+				After parsing the documents you can save the information to a SQL dump file which can be imported into any SQL database or the program can directly insert it into a MySQL database.
+				The information is formatted so that each document "Form" is a separate table with the documents being individual rows.
+				Each field that has multiple values is transferred to it's own table with a foreign key linking it to the document in it's "Form" table.
+			</p>
+			<h3>Usage</h3>
+			<ol>
+				<li>Click [Download as .zip] above.</li>
+				<li>Unzip the file and go to \NSF2SQL\bin\Debug<img src="../images/nsf2sql7.png" /></li>
+				<li>Open NSF2SQL.exe</li>
+				<li>Click [Search Server] to search for an application on a Domino Server or [Search Computer] to browse your computer for a .nsf file<img src="../images/nsf2sql1.png" /></li>
+				<li>Enter the server information if searching a server<img src="../images/nsf2sql2.png" />or just the password if opening a local file</li>
+				<li>Select the database to export and click [Export Documents]<img src="../images/nsf2sql3.png" /></li>
+				<li>Wait until the program is done parsing the documents<img src="../images/nsf2sql4.png" /></li>
+				<li>Once all documents are parsed it will ask if you want to export to a server<img src="../images/nsf2sql8.png" />Click [Yes] to have the sql imported directly to a MySQL server or click [No] to have the SQL dumped to a file so you can import it a different way</li>
+				<li>If you chose to have the program import it directly to a MySQL server it will ask for your server information<img src="../images/nsf2sql6.png" />Database is the name you want for the new database</li>
+				<li>If you chose to dump the SQL to a file it will be saved to a file called "export.sql" on your desktop and it will be opened after the program creates it</li>
+			</ol>
+			<h3>Support</h3>
+			<p>If you need anything contact me any time at me@tonybrix.info<br/><br/>Thanks!</p>
+			</section>
     </div>
 
     
