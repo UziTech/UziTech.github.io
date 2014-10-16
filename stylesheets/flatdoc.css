@@ -2,3 +2,7 @@
 	position: static;
 	float: right;
 }
+
+img{
+	max-width: 100%;
+}
