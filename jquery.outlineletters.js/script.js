@@ -1,4 +1,5 @@
 $(document).on("flatdoc:ready", function(){
+	$(".content img").remove();
 	$("#example1").html("Example 1").css({color: "#00f"}).outlineLetters();
 	$("#example2").html("Example 2").css({color: "#f00"}).outlineLetters({color: '#0ff'});
 	$("#example3").html("Example 3").css({color: "#0f0"}).outlineLetters({size: 5});
