@@ -25,46 +25,48 @@
 
     <div class="container">
       <section id="main_content">
-			<h3>Introduction</h3>
-			<p>
-				This application parses documents from a Lotus Notes application so you can transfer them to a SQL database.
-			</p>
-			<p>
-				It allows you to pick the application from a Domino server or on your local computer.
-				It then parses the documents automatically to find out the type of information in each field at about 20,000 documents per minute.
-				After parsing the documents you can save the information to a SQL dump file which can be imported into any SQL database or the program can directly insert it into a MySQL database.
-				The information is formatted so that each document "Form" is a separate table with the documents being individual rows.
-				Each field that has multiple values is transferred to it's own table with a foreign key linking it to the document in it's "Form" table.
-			</p>
-			<h3>Tutorial</h3>
-			<ol>
-				<li>Click [Download as .zip] above.</li>
-				<li>Unzip the file and go to \NSF2SQL\bin\Debug<img src="../images/nsf2sql7.png" /></li>
-				<li>Open NSF2SQL.exe</li>
-				<li>Click [Search Server] to search for an application on a Domino Server or [Search Computer] to browse your computer for a .nsf file<img src="../images/nsf2sql1.png" /></li>
-				<li>Enter the server information if searching a server<img src="../images/nsf2sql2.png" />or just the password if opening a local file</li>
-				<li>Select the database to export and click [Export Documents]<img src="../images/nsf2sql3.png" /></li>
-				<li>Wait until the program is done parsing the documents<img src="../images/nsf2sql4.png" /></li>
-				<li>Once all documents are parsed it will ask if you want to export to a server<img src="../images/nsf2sql8.png" />Click [Yes] to have the sql imported directly to a MySQL server or click [No] to have the SQL dumped to a file so you can import it a different way</li>
-				<li>If you chose to have the program import it directly to a MySQL server it will ask for your server information<img src="../images/nsf2sql6.png" />Database is the name you want for the new database</li>
-				<li>If you chose to dump the SQL to a file it will be saved to a file called "export.sql" on your desktop and it will be opened after the program creates it</li>
-			</ol>
-			<h3>Support</h3>
-			<p>If you need anything contact me any time at me@tonybrix.info<br/><br/>Thanks!</p>
-			<h3>Comments</h3>
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'uzitech-nsf2sql'; // required: replace example with your forum shortname
+				<h3>Introduction</h3>
+				<p>
+					This application parses documents from a Lotus Notes application so you can transfer them to a SQL database.
+				</p>
+				<p>
+					It allows you to pick the application from a Domino server or on your local computer.
+					It then parses the documents automatically to find out the type of information in each field at about 20,000 documents per minute.
+					After parsing the documents you can save the information to a SQL dump file which can be imported into any SQL database or the program can directly insert it into a MySQL database.
+					The information is formatted so that each document "Form" is a separate table with the documents being individual rows.
+					Each field that has multiple values is transferred to it's own table with a foreign key linking it to the document in it's "Form" table.
+				</p>
+				<h3>Tutorial</h3>
+				<ol>
+					<li>Click [Download as .zip] above.</li>
+					<li>Unzip the file and go to \NSF2SQL\bin\Debug<img src="../images/nsf2sql7.png" /></li>
+					<li>Open NSF2SQL.exe</li>
+					<li>Click [Search Server] to search for an application on a Domino Server or [Search Computer] to browse your computer for a .nsf file<img src="../images/nsf2sql1.png" /></li>
+					<li>Enter the server information if searching a server<img src="../images/nsf2sql2.png" />or just the password if opening a local file</li>
+					<li>Select the database to export and click [Export Documents]<img src="../images/nsf2sql3.png" /></li>
+					<li>Wait until the program is done parsing the documents<img src="../images/nsf2sql4.png" /></li>
+					<li>Once all documents are parsed it will ask if you want to export to a server<img src="../images/nsf2sql8.png" />Click [Yes] to have the sql imported directly to a MySQL server or click [No] to have the SQL dumped to a file so you can import it a different way</li>
+					<li>If you chose to have the program import it directly to a MySQL server it will ask for your server information<img src="../images/nsf2sql6.png" />Database is the name you want for the new database</li>
+					<li>If you chose to dump the SQL to a file it will be saved to a file called "export.sql" on your desktop and it will be opened after the program creates it</li>
+				</ol>
+				<h3>Support</h3>
+				<p>If you need anything contact me any time at me@tonybrix.info<br/><br/>Thanks!</p>
+				<h3>Comments</h3>
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+					var disqus_shortname = 'uzitech-nsf2sql'; // required: replace example with your forum shortname
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    
+					/* * * DON'T EDIT BELOW THIS LINE * * */
+					(function () {
+						var dsq = document.createElement('script');
+						dsq.type = 'text/javascript';
+						dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+
 			</section>
     </div>
   </body>
