@@ -112,7 +112,8 @@
       offsets.push({
         id: $(this).attr('id'),
         index: i,
-        el: this
+        el: this,
+				offset: offset
       });
     });
 
@@ -138,7 +139,7 @@
       for (var i in offsets) {
         if (offsets.hasOwnProperty(i)) {
           var offset = offsets[i];
-          if ($(offset.el).offset().top < y) latest = offset;
+          if ($(offset.el).offset().top + offset.offset < y) latest = offset;
         }
       }
 
