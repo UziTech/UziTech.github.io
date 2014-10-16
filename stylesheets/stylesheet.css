@@ -12,7 +12,7 @@ body {
 
 .container {
   width: 90%;
-  /*max-width: 600px;*/
+  min-width: 300px;
   margin: 0 auto;
 }
 
@@ -46,7 +46,6 @@ header {
 header h1 {
   font-size: 30px;
   line-height: 1.5;
-  margin: 0 0 0 -40px;
   font-weight: bold;
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   color: #b5e853;
@@ -55,11 +54,6 @@ header h1 {
                0 0 10px rgba(181, 232, 83, 0.1);
   letter-spacing: -1px;
   -webkit-font-smoothing: antialiased;
-}
-
-header h1:before {
-  content: "./ ";
-  font-size: 24px;
 }
 
 header h2 {
@@ -109,6 +103,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #main_content h4 {
   font-size: 14px;
+	margin-bottom: 0px;
+	margin-top: 10px;
 }
 
 #main_content h5 {
@@ -191,6 +187,10 @@ hr {
   color: #b5e853;
 }
 
+textarea{
+	width: 300px;
+	height: 100px;
+}
 /* Buttons
 */
 
