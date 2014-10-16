@@ -234,7 +234,7 @@ textarea{
 
 a {
   color: #63c0f5;
-	transition: all .5s;
+	transition: text-shadow .2s;
 }
 a:hover{
   text-shadow: 0 0 10px rgba(104, 182, 255, 1);
