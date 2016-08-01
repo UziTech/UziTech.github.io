@@ -91,15 +91,16 @@
 					<label for="format">Output:</label><br/>
 					<textarea id="format" placeholder="Format" readonly=""></textarea><br/>
 					<script type="text/javascript">
+						var pattern = document.getElementById("pattern");
+						var format = document.getElementById("format");
 						function formatPattern() {
 							var d = new Date();
-							var pattern = document.getElementById("pattern");
-							var format = document.getElementById("format");
 							format.value = d.format(pattern.value);
 						}
+						pattern.addEventListener("change", formatPattern);
+						pattern.addEventListener("input", formatPattern);
 						formatPattern();
 					</script>
-					<button type="button" onclick="formatPattern();">Submit</button>
 				</p>
 				<h3>Comments</h3>
 				<div id="disqus_thread"></div>
