@@ -87,19 +87,36 @@
 				</ul>
 				<h3>Try it</h3>
 				<p>
+					<label for="locales">Locale</label><br />
+					<select id="locales"></select><br />
 					<label for="pattern">Pattern:</label><br/>
 					<textarea id="pattern" placeholder="Pattern">DDDD, MMMM DS h:mm:ss.fff TT</textarea><br/>
 					<label for="format">Output:</label><br/>
 					<textarea id="format" placeholder="Format" readonly=""></textarea><br/>
 					<script type="text/javascript">
+						var locales = document.getElementById("locales");
 						var pattern = document.getElementById("pattern");
 						var format = document.getElementById("format");
 						function formatPattern() {
 							var d = new Date();
 							format.value = d.format(pattern.value);
 						}
+						function changeLocale() {
+							var locale = locales.value;
+							Date.prototype.setLocale(locale);
+							formatPattern();
+						}
+						function setLocales() {
+							for (var locale in Date.locales) {
+								var option = document.createElement("option");
+								option.innerHTML = locale;
+								locales.appendChild(option);
+							}
+						}
 						pattern.addEventListener("change", formatPattern);
 						pattern.addEventListener("input", formatPattern);
+						locales.addEventListener("change", changeLocale);
+						setLocales();
 						formatPattern();
 					</script>
 				</p>
